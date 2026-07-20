@@ -55,4 +55,30 @@ INSERT INTO service_projects (title, description, location, date, organization_i
 ('Senior Outreach', 'Visiting seniors and offering assistance.', 'Sunrise Home', '2024-06-14', 3),
 ('Back-to-School Drive', 'Providing supplies to students.', 'Lincoln School', '2024-07-28', 3);
 
+CREATE TABLE category (
+    category_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL UNIQUE
+);
+
+
+-- Junction table for the many-to-many relationship
+CREATE TABLE project_category (
+    project_id INTEGER,
+    category_id INTEGER,
+    PRIMARY KEY (project_id, category_id),  -- Composite primary key
+    FOREIGN KEY (project_id) REFERENCES service_projects (project_id),
+    FOREIGN KEY (category_id) REFERENCES category (category_id)
+);
+
+INSERT INTO category (name) VALUES
+    ('Community Service'),
+    ('Environmental'),
+    ('Education');
+
+
+INSERT INTO public.project_category (project_id, category_id) VALUES
+    (1, 2),
+    (2, 1),
+    (3, 3);
+
 
