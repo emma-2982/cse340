@@ -81,4 +81,36 @@ INSERT INTO public.project_category (project_id, category_id) VALUES
     (2, 1),
     (3, 3);
 
+ALTER TABLE service_projects
+ADD CONSTRAINT fk_category
+FOREIGN KEY (category_id)
+REFERENCES category(category_id);
+
+INSERT INTO service_projects 
+(organization_id, category_id, title, description, location, date)
+VALUES
+(1, 1, 'Community Bridge Repair', 'Volunteers repair damaged footbridges.', 'Riverside Park', '2024-03-10'),
+(1, 1, 'Playground Renovation', 'Updating playground equipment for safety.', 'Oakwood Playground', '2024-04-02'),
+(1, 1, 'Solar Panel Installation', 'Installing solar panels for low-income homes.', 'East District', '2024-05-15'),
+(1, 1, 'Bike Path Expansion', 'Extending bike paths for safer commuting.', 'North Trail', '2024-06-01'),
+(1, 1, 'Storm Drain Cleanup', 'Clearing debris from storm drains.', 'Downtown', '2024-07-20');
+
+
+INSERT INTO service_projects 
+(organization_id, category_id, title, description, location, date)
+VALUES
+(2, 2, 'Garden Bed Construction', 'Building raised garden beds.', 'Community Garden', '2024-03-22'),
+(2, 2, 'Seed Distribution Drive', 'Providing seeds to local families.', 'GreenHarvest HQ', '2024-04-18'),
+(2, 2, 'Composting Workshop', 'Teaching composting techniques.', 'City Hall', '2024-05-05'),
+(2, 2, 'Irrigation Setup', 'Installing drip irrigation systems.', 'Urban Farm', '2024-06-12'),
+(2, 2, 'Farmers Market Support', 'Helping run the weekly farmers market.', 'Central Plaza', '2024-07-08');
+
+INSERT INTO service_projects 
+(organization_id, category_id, title, description, location, date)
+VALUES
+(3, 3, 'Youth Mentorship', 'Pairing mentors with local youth.', 'UnityServe Center', '2024-03-30'),
+(3, 3, 'Charity Run Event', 'Organizing a 5K charity run.', 'City Stadium', '2024-04-25'),
+(3, 3, 'Food Pantry Support', 'Sorting and distributing food donations.', 'Community Pantry', '2024-05-20'),
+(3, 3, 'Senior Outreach', 'Visiting seniors and offering assistance.', 'Sunrise Home', '2024-06-14'),
+(3, 3, 'Back-to-School Drive', 'Providing supplies to students.', 'Lincoln School', '2024-07-28');
 
