@@ -114,3 +114,39 @@ VALUES
 (3, 3, 'Senior Outreach', 'Visiting seniors and offering assistance.', 'Sunrise Home', '2024-06-14'),
 (3, 3, 'Back-to-School Drive', 'Providing supplies to students.', 'Lincoln School', '2024-07-28');
 
+UPDATE service_projects SET date = '2026-08-15' WHERE project_id = 1;
+UPDATE service_projects SET date = '2026-09-01' WHERE project_id = 2;
+UPDATE service_projects SET date = '2026-10-10' WHERE project_id = 3;
+UPDATE service_projects SET date = '2026-11-05' WHERE project_id = 4;
+UPDATE service_projects SET date = '2026-12-20' WHERE project_id = 5;
+
+UPDATE service_projects SET date = '2026-08-22' WHERE project_id = 6;
+UPDATE service_projects SET date = '2026-09-18' WHERE project_id = 7;
+UPDATE service_projects SET date = '2026-10-05' WHERE project_id = 8;
+UPDATE service_projects SET date = '2026-11-12' WHERE project_id = 9;
+UPDATE service_projects SET date = '2026-12-08' WHERE project_id = 10;
+
+UPDATE service_projects SET date = '2027-01-15' WHERE project_id = 11;
+UPDATE service_projects SET date = '2027-02-10' WHERE project_id = 12;
+UPDATE service_projects SET date = '2027-03-20' WHERE project_id = 13;
+UPDATE service_projects SET date = '2027-04-14' WHERE project_id = 14;
+UPDATE service_projects SET date = '2027-05-28' WHERE project_id = 15;
+
+-- Now update the duplicate second batch (project_id 16–30)
+UPDATE service_projects SET date = '2026-08-15' WHERE project_id = 16;
+UPDATE service_projects SET date = '2026-09-01' WHERE project_id = 17;
+UPDATE service_projects SET date = '2026-10-10' WHERE project_id = 18;
+UPDATE service_projects SET date = '2026-11-05' WHERE project_id = 19;
+UPDATE service_projects SET date = '2026-12-20' WHERE project_id = 20;
+
+UPDATE service_projects SET date = '2026-08-22' WHERE project_id = 21;
+UPDATE service_projects SET date = '2026-09-18' WHERE project_id = 22;
+UPDATE service_projects SET date = '2026-10-05' WHERE project_id = 23;
+UPDATE service_projects SET date = '2026-11-12' WHERE project_id = 24;
+UPDATE service_projects SET date = '2026-12-08' WHERE project_id = 25;
+
+UPDATE service_projects SET date = '2027-01-15' WHERE project_id = 26;
+UPDATE service_projects SET date = '2027-02-10' WHERE project_id = 27;
+UPDATE service_projects SET date = '2027-03-20' WHERE project_id = 28;
+UPDATE service_projects SET date = '2027-04-14' WHERE project_id = 29;
+UPDATE service_projects SET date = '2027-05-28' WHERE project_id = 30;
