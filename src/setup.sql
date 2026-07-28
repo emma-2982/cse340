@@ -76,7 +76,7 @@ INSERT INTO category (name) VALUES
     ('Education');
 
 
-INSERT INTO public.project_category (project_id, category_id) VALUES
+INSERT INTO project_category (project_id, category_id) VALUES
     (1, 2),
     (2, 1),
     (3, 3);
