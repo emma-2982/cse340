@@ -9,6 +9,23 @@
             <%= project.description %>
         </p>
 
+        <h2>Categories</h2>
+        
+        <% if (categories.length===0) { %>
+            <p>No categories assigned.</p>
+            <% } else { %>
+                <ul>
+                    <% categories.forEach(cat=> { %>
+                        <li>
+                            <a href="/category/<%= cat.category_id %>">
+                                <%= cat.name %>
+                            </a>
+                        </li>
+                        <% }) %>
+                </ul>
+                <% } %>
+
+
         <p>
             <strong>Date:</strong>
             <%= new Date(project.date).toLocaleDateString("en-US", { year: "numeric" , month: "long" , day: "numeric" })
