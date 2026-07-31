@@ -11,14 +11,14 @@
                 <li>
                     <a href="/organization/<%= organization.organization_id %>">
                         <img src="/images/<%= organization.logo_filename %>" alt="<%= organization.name %> logo">
+                        <strong>
+                            <%= organization.name %>
+                        </strong><br>
+                        <%= organization.description %><br>
+                            <%= organization.contact_email %>
                     </a>
-                
-                    <strong>
-                        <%= organization.name %>
-                    </strong><br>
-                    <%= organization.description %><br>
-                        <%= organization.contact_email %>
                 </li>
+ 
 
                 <% }); %>
         </ul>

@@ -99,6 +99,7 @@ app.use((err, req, res, next) => {
     // Log error details for debugging
     console.error('Error occurred:', err.message);
     console.error('Stack trace:', err.stack);
+    
 
     // Determine status and template
     const status = err.status || 500;
